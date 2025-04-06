@@ -12,7 +12,6 @@
 #include <array>
 #include <cstring>
 #include <fcntl.h>
-#include <iomanip>
 #include <iostream>
 #include <filesystem>
 #include <signal.h>
@@ -121,7 +120,7 @@ int main(int argc, char **argv)
 
             case 0x80:
                 std::cout << "Button 7 pressed" << std::endl;
-                generateKeyPressEvent(gUinputFileDescriptor, KeyType::BUTTON_7);
+                generateKeyPressEvent(gUinputFileDescriptor, KeyType::TALL_BUTTON);
                 break;
 
             case 0x81:
@@ -131,22 +130,22 @@ int main(int argc, char **argv)
 
             case 0x82:
                 std::cout << "Button 3 pressed " << std::endl;
-                generateKeyPressEvent(gUinputFileDescriptor, KeyType::BUTTON_3);
+                generateKeyPressEvent(gUinputFileDescriptor, KeyType::TOP_BUTTON);
                 break;
 
             case 0x83:
                 std::cout << "Button 6 pressed" << std::endl;
-                generateKeyPressEvent(gUinputFileDescriptor, KeyType::BUTTON_6);
+                generateKeyPressEvent(gUinputFileDescriptor, KeyType::SHORT_BUTTON);
                 break;
 
-            case 0x84:
-                std::cout << "Big center wheel moved counterclockwise" << std::endl;
-                generateKeyPressEvent(gUinputFileDescriptor, KeyType::IPOD_WHEEL_COUNTERCLOCKWISE);
-                break;
-
-            case 0x8F:
+            case 0x4F:
                 std::cout << "iPod wheel moved clockwise" << std::endl;
-                generateKeyPressEvent(gUinputFileDescriptor, KeyType::IPOD_WHEEL_CLOCKWISE);
+                generateKeyPressEvent(gUinputFileDescriptor, KeyType::DIAL_CLOCKWISE);
+                break;
+
+            case 0x0F:
+                std::cout << "iPod wheel moved counterclockwise" << std::endl;
+                generateKeyPressEvent(gUinputFileDescriptor, KeyType::DIAL_COUNTERCLOCKWISE);
                 break;
 
             case 0x90:
@@ -173,47 +172,45 @@ int main(int argc, char **argv)
                 emit(gUinputFileDescriptor, EV_SYN, SYN_REPORT, 0);
                 break;
 
-            case 0x0A:
+            case 0x8A:
                 std::cout << "Scroll wheel clicked" << std::endl;
-                generateKeyPressEvent(gUinputFileDescriptor, KeyType::SCROLL_WHEEL_CLICK);
-                break;
-
-            case 0x09:
-                std::cout << "Scroll wheel down used" << std::endl;
-                generateKeyPressEvent(gUinputFileDescriptor, KeyType::SCROLL_WHEEL_DOWN);
-                break;
-
-            case 0x2A:
-                std::cout << "Button 11 pressed" << std::endl;
-                generateKeyPressEvent(gUinputFileDescriptor, KeyType::BUTTON_11);
-                break;
-
-            case 0x22:
-                std::cout << "Button A pressed" << std::endl;
-                generateKeyPressEvent(gUinputFileDescriptor, KeyType::BUTTON_A);
-
-                break;
-
-            case 0x23:
-                std::cout << "Button B pressed" << std::endl;
-                generateKeyPressEvent(gUinputFileDescriptor, KeyType::BUTTON_B);
-                break;
-
-            case 0x44:
-                std::cout << "Big center wheel moved clockwise" << std::endl;
-                generateKeyPressEvent(gUinputFileDescriptor, KeyType::BIG_CENTER_WHEEL_CLOCKWISE);
+                generateKeyPressEvent(gUinputFileDescriptor, KeyType::SCROLL_CLICK);
                 break;
 
             case 0x49:
                 std::cout << "Scroll wheel up used" << std::endl;
-                generateKeyPressEvent(gUinputFileDescriptor, KeyType::SCROLL_WHEEL_UP);
+                generateKeyPressEvent(gUinputFileDescriptor, KeyType::SCROLL_UP);
                 break;
 
-            case 0x4F:
-                std::cout << "iPod wheel moved counterclockwise" << std::endl;
-                generateKeyPressEvent(gUinputFileDescriptor, KeyType::IPOD_WHEEL_COUNTERCLOCKWISE);
+            case 0x09:
+                std::cout << "Scroll wheel down used" << std::endl;
+                generateKeyPressEvent(gUinputFileDescriptor, KeyType::SCROLL_DOWN);
                 break;
 
+            case 0xAA:
+                std::cout << "Button 11 pressed" << std::endl;
+                generateKeyPressEvent(gUinputFileDescriptor, KeyType::TOUR_BUTTON);
+                break;
+
+            case 0xa2:
+                std::cout << "Button A pressed" << std::endl;
+                generateKeyPressEvent(gUinputFileDescriptor, KeyType::C1_BUTTON);
+                break;
+
+            case 0xa3:
+                std::cout << "Button B pressed" << std::endl;
+                generateKeyPressEvent(gUinputFileDescriptor, KeyType::C2_BUTTON);
+                break;
+
+            case 0x44:
+                std::cout << "Big center wheel moved clockwise" << std::endl;
+                generateKeyPressEvent(gUinputFileDescriptor, KeyType::KNOB_CLOCKWISE);
+                break;
+
+            case 0x04:
+                std::cout << "Big center wheel moved counterclockwise" << std::endl;
+                generateKeyPressEvent(gUinputFileDescriptor, KeyType::KNOB_COUNTERCLOCKWISE);
+                break;
                 // Don't put a default statement here, since the bytes you'd catch would just be the 'RELEASED' version of the keypress signal
                 // (since above you're only listening to the 'PRESSED' version)
             }

@@ -4,24 +4,26 @@ Button mapping names come from: https://github.com/torvalds/linux/blob/master/in
 
 | Button name                       | 'Scan Code'  (Hex) | Key mapped to                 |
 |-----------------------------------|--------------------|-------------------------------|
-| SIDE_BUTTON                       | 81                 | KEY_MUTE                      |
-| SCROLL_WHEEL_UP                   | [49][c9]           | KEY_SCROLLUP                  |
-| SCROLL_WHEEL_DOWN                 | [09][89]           | KEY_SCROLLDOWN                |
-| SCROLL_WHEEL_CLICK                | [0a][8a]           | KEY_PAUSE                     |
-| BUTTON_3                          | 82                 | KEY_ENTER                     |
-| BUTTON_A                          | [22][a2]           | BTN_LEFT (Mouse left click)   |
-| BUTTON_B                          | [23][a3]           | BTN_RIGHT (Mouse right click) |
-| BUTTON_6                          | 83                 | KEY_DOT                       |
-| BUTTON_7                          | 80                 | KEY_MENU                      |
-| BUTTON_DPAD_UP                    | 90                 | Mouse up                      |
-| BUTTON_DPAD_RIGHT                 | 93                 | Mouse right                   |
-| BUTTON_DPAD_DOWN                  | 91                 | Mouse down                    |
-| BUTTON_DPAD_LEFT                  | 92                 | Mouse left                    |
-| IPOD_WHEEL_CLOCKWISE              | 8f                 | KEY_VOLUMEUP                  |
-| IPOD_WHEEL_COUNTERCLOCKWISE       | [4f][cf]           | KEY_VOLUMEDOWN                |
-| BIG_CENTER_WHEEL_CLOCKWISE        | [44][c4]           | KEY_BRIGHTNESSUP              |
-| BIG_CENTER_WHEEL_COUNTERCLOCKWISE | 84                 | KEY_BRIGHTNESSDOWN            |
-| BUTTON_11                         | [2a][aa]           | KEY_ESC                       |
+| 侧键                              | 01:81              | KEY_MUTE                      |
+| 滚轮上                            | 49                 | KEY_SCROLLUP                  |
+| 滚轮下                            | 09                 | KEY_SCROLLDOWN                |
+| 滚轮单击                          | 0a:8a              | KEY_PAUSE                     |
+| 横键                              | 02:82              | KEY_ENTER                     |
+| C1                                | 22:a2              | BTN_LEFT (Mouse left click)   |
+| C2                                | 23:a3              | BTN_RIGHT (Mouse right click) |
+| 短键                              | 03:83              | KEY_DOT                       |
+| 长键                              | 00:80              | KEY_MENU                      |
+| 上                                | 10:90              | Mouse up                      |
+| 右                                | 13:93              | Mouse right                   |
+| 下                                | 11:91              | Mouse down                    |
+| 左                                | 12:92              | Mouse left                    |
+| 转盘顺时针                        | 4f                 | KEY_VOLUMEUP                  |
+| 转盘逆时针                        | 0f                 | KEY_VOLUMEDOWN                |
+| 转盘单击                          | 38:b8              | |
+| 旋钮顺时针                        | 44                 | KEY_BRIGHTNESSUP              |
+| 旋钮逆时针                        | 04                 | KEY_BRIGHTNESSDOWN            |
+| 旋钮单击                          | 37:b7              | |
+| Tour                              | 2a:aa              | KEY_ESC                       |
 
 ![annotated version](./tourbox-stock-image-annotated.jpg)
 
