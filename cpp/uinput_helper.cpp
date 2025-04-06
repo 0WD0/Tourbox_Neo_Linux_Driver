@@ -56,23 +56,11 @@ void generateKeyPressEvent(int fileDescriptor, int keyCode) {
         emit(fileDescriptor, EV_SYN, SYN_REPORT, 0);
         return;
     }
-
-    // 处理标准按键或鼠标按钮
-    if (keyCode >= BTN_LEFT && keyCode <= BTN_TASK) {
-        // 鼠标按钮事件
-        emit(fileDescriptor, EV_KEY, keyCode, 1);  // 按下
-        emit(fileDescriptor, EV_SYN, SYN_REPORT, 0);
-        usleep(10000);  // 10ms 延迟
-        emit(fileDescriptor, EV_KEY, keyCode, 0);  // 释放
-        emit(fileDescriptor, EV_SYN, SYN_REPORT, 0);
-    } else {
-        // 键盘按键事件
-        emit(fileDescriptor, EV_KEY, keyCode, 1);  // 按下
-        emit(fileDescriptor, EV_SYN, SYN_REPORT, 0);
-        usleep(10000);  // 10ms 延迟
-        emit(fileDescriptor, EV_KEY, keyCode, 0);  // 释放
-        emit(fileDescriptor, EV_SYN, SYN_REPORT, 0);
-    }
+    emit(fileDescriptor, EV_KEY, keyCode, 1);  // 按下
+    emit(fileDescriptor, EV_SYN, SYN_REPORT, 0);
+    usleep(10000);  // 10ms 延迟
+    emit(fileDescriptor, EV_KEY, keyCode, 0);  // 释放
+    emit(fileDescriptor, EV_SYN, SYN_REPORT, 0);
 }
 
 /**
