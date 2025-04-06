@@ -1,0 +1,54 @@
+{
+  "presets": {
+    "default": {
+      "81": "KEY_MUTE",
+      "49": "KEY_SCROLLUP",
+      "09": "KEY_SCROLLDOWN",
+      "8A": "KEY_PAUSE",
+      "82": "KEY_ENTER",
+      "A2": "BTN_LEFT",
+      "A3": "BTN_RIGHT",
+      "83": "KEY_DOT",
+      "80": "KEY_MENU",
+      "90": "REL_Y_NEG",
+      "93": "REL_X_POS",
+      "91": "REL_Y_POS",
+      "92": "REL_X_NEG",
+      "4F": "KEY_VOLUMEUP",
+      "0F": "KEY_VOLUMEDOWN",
+      "B8": "KEY_SPACE",
+      "44": "KEY_BRIGHTNESSUP",
+      "04": "KEY_BRIGHTNESSDOWN",
+      "B7": "KEY_TAB",
+      "AA": "KEY_ESC"
+    },
+    "gimp": {
+      "81": "KEY_LEFTCTRL",
+      "49": "KEY_KPPLUS",
+      "09": "KEY_KPMINUS",
+      "8A": "KEY_SPACE",
+      "82": "KEY_B",
+      "A2": "BTN_LEFT",
+      "A3": "BTN_RIGHT",
+      "83": "KEY_E",
+      "80": "KEY_L",
+      "90": "REL_Y_NEG",
+      "93": "REL_X_POS",
+      "91": "REL_Y_POS",
+      "92": "REL_X_NEG",
+      "4F": "KEY_LEFTBRACE",
+      "0F": "KEY_RIGHTBRACE",
+      "B8": "KEY_X",
+      "44": "KEY_LEFTSHIFT",
+      "04": "KEY_LEFTALT",
+      "B7": "KEY_Z",
+      "AA": "KEY_ESC"
+    }
+  },
+  "window_rules": [
+    {
+      "class": "Gimp",
+      "preset": "gimp"
+    }
+  ]
+}
