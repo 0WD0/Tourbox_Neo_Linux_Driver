@@ -226,26 +226,26 @@ sudo udevadm trigger
 
 | 按键名称   | 扫描码 (十六进制) | 默认映射            |
 |-----------|-----------------|--------------------|
-| 侧键      | 81              | KEY_MUTE           |
-| 滚轮上     | 49              | KEY_SCROLLUP       |
-| 滚轮下     | 09              | KEY_SCROLLDOWN     |
-| 滚轮单击   | 8A              | KEY_PAUSE          |
-| 横键      | 82              | KEY_ENTER          |
-| C1        | A2              | BTN_LEFT           |
-| C2        | A3              | BTN_RIGHT          |
-| 短键      | 83              | KEY_DOT            |
-| 长键      | 80              | KEY_MENU           |
-| 上        | 90              | 鼠标上移            |
-| 右        | 93              | 鼠标右移            |
-| 下        | 91              | 鼠标下移            |
-| 左        | 92              | 鼠标左移            |
-| 转盘顺时针  | 4F              | KEY_VOLUMEUP       |
-| 转盘逆时针  | 0F              | KEY_VOLUMEDOWN     |
-| 转盘单击   | B8              | KEY_SPACE          |
-| 旋钮顺时针  | 44              | KEY_BRIGHTNESSUP   |
-| 旋钮逆时针  | 04              | KEY_BRIGHTNESSDOWN |
-| 旋钮单击   | B7              | KEY_TAB            |
-| Tour      | AA              | KEY_ESC            |
+| 侧键                              | 01:81              | KEY_MUTE                      |
+| 滚轮上                            | 49                 | KEY_SCROLLUP                  |
+| 滚轮下                            | 09                 | KEY_SCROLLDOWN                |
+| 滚轮单击                          | 0a:8a              | KEY_PAUSE                     |
+| 横键                              | 02:82              | KEY_ENTER                     |
+| C1                                | 22:a2              | BTN_LEFT (Mouse left click)   |
+| C2                                | 23:a3              | BTN_RIGHT (Mouse right click) |
+| 短键                              | 03:83              | KEY_DOT                       |
+| 长键                              | 00:80              | KEY_MENU                      |
+| 上                                | 10:90              | Mouse up                      |
+| 右                                | 13:93              | Mouse right                   |
+| 下                                | 11:91              | Mouse down                    |
+| 左                                | 12:92              | Mouse left                    |
+| 转盘顺时针                        | 4f                 | KEY_VOLUMEUP                  |
+| 转盘逆时针                        | 0f                 | KEY_VOLUMEDOWN                |
+| 转盘单击                          | 38:b8              | KEY_SPACE                     |
+| 旋钮顺时针                        | 44                 | KEY_BRIGHTNESSUP              |
+| 旋钮逆时针                        | 04                 | KEY_BRIGHTNESSDOWN            |
+| 旋钮单击                          | 37:b7              | KEY_TAB                       |
+| Tour                              | 2a:aa              | KEY_ESC                       |
 
 ![annotated version](./images/tourbox_neo_annotated.jpg)
 
