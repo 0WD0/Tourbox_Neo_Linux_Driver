@@ -41,6 +41,8 @@ bool ConfigManager::loadConfig() {
             return false;
         }
 
+		std::cerr<<"正在加载配置文件: "<<m_configPath<<std::endl;
+
         json config;
         configFile >> config;
 

@@ -226,26 +226,26 @@ sudo udevadm trigger
 
 | 按键名称   | 扫描码 (十六进制) | 默认映射            |
 |-----------|-----------------|--------------------|
-| 侧键                              | 01:81              | KEY_MUTE                      |
 | 滚轮上                            | 49                 | KEY_SCROLLUP                  |
 | 滚轮下                            | 09                 | KEY_SCROLLDOWN                |
-| 滚轮单击                          | 0a:8a              | KEY_PAUSE                     |
-| 横键                              | 02:82              | KEY_ENTER                     |
-| C1                                | 22:a2              | BTN_LEFT (Mouse left click)   |
-| C2                                | 23:a3              | BTN_RIGHT (Mouse right click) |
-| 短键                              | 03:83              | KEY_DOT                       |
-| 长键                              | 00:80              | KEY_MENU                      |
-| 上                                | 10:90              | Mouse up                      |
-| 右                                | 13:93              | Mouse right                   |
-| 下                                | 11:91              | Mouse down                    |
-| 左                                | 12:92              | Mouse left                    |
+| 滚轮 按下/释放                         | 0a:8a              | KEY_PAUSE                     |
+| 侧键 按下/释放                             | 01:81              | KEY_MUTE                      |
+| 横键 按下/释放                             | 02:82              | KEY_ENTER                     |
+| C1 按下/释放                               | 22:a2              | BTN_LEFT (Mouse left click)   |
+| C2 按下/释放                               | 23:a3              | BTN_RIGHT (Mouse right click) |
+| 短键 按下/释放                             | 03:83              | KEY_DOT                       |
+| 长键 按下/释放                             | 00:80              | KEY_MENU                      |
+| 上 按下/释放                       | 10:90              | Mouse up                      |
+| 右 按下/释放                       | 13:93              | Mouse right                   |
+| 下 按下/释放               | 11:91              | Mouse down                    |
+| 左 按下/释放                                | 12:92              | Mouse left                    |
 | 转盘顺时针                        | 4f                 | KEY_VOLUMEUP                  |
 | 转盘逆时针                        | 0f                 | KEY_VOLUMEDOWN                |
-| 转盘单击                          | 38:b8              | KEY_SPACE                     |
+| 转盘 按下/释放                          | 38:b8              | KEY_SPACE                     |
 | 旋钮顺时针                        | 44                 | KEY_BRIGHTNESSUP              |
 | 旋钮逆时针                        | 04                 | KEY_BRIGHTNESSDOWN            |
-| 旋钮单击                          | 37:b7              | KEY_TAB                       |
-| Tour                              | 2a:aa              | KEY_ESC                       |
+| 旋钮 按下/释放                          | 37:b7              | KEY_TAB                       |
+| Tour 按下/释放                              | 2a:aa              | KEY_ESC                       |
 
 ![annotated version](./images/tourbox_neo_annotated.jpg)
 
